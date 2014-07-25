@@ -23,3 +23,7 @@ _testmain.go
 *.test
 
 .DS_Store
+
+test-results/
+tmp/
+routes/
