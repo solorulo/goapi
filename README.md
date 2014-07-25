@@ -5,14 +5,6 @@ Primer mini api con Go
 
 Consiste en 8 peticiones que responden en formato json:
 
- * /		index
- * /login 	login
- * /logout	logout
- * /add		agregar usuario*
- * /edit	editar usuario*
- * /list	lista de usuarios*
- * /get		ver usuario*
-
 | URL | Descripción          |
 | ------------- | ----------- |
 | / | index |
