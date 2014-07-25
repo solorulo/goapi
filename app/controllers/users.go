@@ -18,7 +18,7 @@ func (c Users) Add(nombre, apellido, email, password string) revel.Result {
 	if error {
 		return c.RenderJson(api.Error())
 	}
-	return c.RenderJson(api.MakeMap(1, "a success"))
+	return c.RenderJson(api.MakeMap(1, "add success"))
 }
 
 func (c Users) Edit(id, nombre, apellido, email, password string) revel.Result {

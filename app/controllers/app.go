@@ -14,11 +14,7 @@ func (c App) Index() revel.Result {
 	if _, ok := c.Session["id_user"]; !ok{ 
 		return c.RenderJson(api.NotLogged())
 	}
-	data := map[string]interface{} {
-		"code":		1,
-		"msg":		"index",
-	}
-	return c.RenderJson(data)
+	return c.RenderJson(api.MakeMap(1, "index"))
 }
 
 func (c App) Login(email, pass string) revel.Result {
@@ -27,11 +23,7 @@ func (c App) Login(email, pass string) revel.Result {
 		return c.RenderJson(api.Error())
 	}
 	c.Session["id_user"] = fmt.Sprintf("%v",user.Id);
-	data := map[string]interface{} {
-		"code":		1,
-		"msg":		"login succesful",
-	}
-	return c.RenderJson(data)
+	return c.RenderJson(api.MakeMap(1, "login succesful"))
 }
 
 func (c App) Logout() revel.Result {
@@ -39,9 +31,5 @@ func (c App) Logout() revel.Result {
 		return c.RenderJson(api.NotLogged())
 	}
 	delete(c.Session, "id_user")
-	data := map[string]interface{} {
-		"code":		1,
-		"msg":		"logout succesful",
-	}
-	return c.RenderJson(data)
+	return c.RenderJson(api.MakeMap(1, "logout succesful"))
 }
