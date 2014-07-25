@@ -6,6 +6,7 @@ module:testrunner
 
 GET     /                                       App.Index
 POST    /login                                  App.Login
+POST    /logout                                 App.Logout
 POST    /add                                   	Users.Add
 POST    /edit                                   Users.Edit
 GET     /list                                   Users.List
