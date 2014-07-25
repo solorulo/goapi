@@ -11,6 +11,16 @@ Consiste en 8 peticiones que responden en formato json:
  * /add		agregar usuario*
  * /edit	editar usuario*
  * /list	lista de usuarios*
- * /get	ver usuario
+ * /get		ver usuario*
+
+| URL | Descripción          |
+| ------------- | ----------- |
+| / | index |
+| /login | login |
+| /logout | logout |
+| /add | agregar usuario* |
+| /edit | editar usuario* |
+| /list | lista de usuarios* |
+| /get | ver usuario* |
 
 *funciones solo habilitadas para usuarios logueados
